@@ -47,4 +47,16 @@ some length is to be received. As you can see, the length of the array doesn't m
 far as the function is concerned because C/C++ performs no bounds checking. In fact,
 as far as the compiler is concerned,
 
+
+for the case func1
+void func1(int x[32])
+{
+.
+.
+.
+}
+also works because the compiler generates code that instructs func1( ) to receive
+a pointer—it does not actually create a 32-element array.
+
+
 */

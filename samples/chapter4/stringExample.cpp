@@ -12,6 +12,7 @@ int main(void)
 
     printf("lengths: %d %d\n", strlen(s1), strlen(s2));
 
+    // Remember, strcmp( ) returns false if the strings are equal.
     if (!strcmp(s1, s2))
         printf("The strings are equal\n");
 
