@@ -8,7 +8,7 @@ illustrates this technique. It will print the contents of the specified row for 
 integer array num:*/
 
 int num[10][10];
-void pr_row(int j);
+void pr_row(int j, int row_dimension, int *p);
 
 int main(void) {
     
@@ -18,19 +18,19 @@ int main(void) {
         num[1][t] = t;
     }
 
-    pr_row(1);
+    pr_row(0, 10, (int *) num); /* print first row */
     return 0;
 }
 
 
-void pr_row(int j) {
+void pr_row(int j, int row_dimension, int *p) {
     
-    int *p, t;
+    int t;
     /* get address of first
     element in row j */
-    p = (int *) &num[j];
+   p = p + (j * row_dimension);
 
-    for(t=0; t<10; ++t) {
+    for(t=0; t<row_dimension; ++t) {
         printf("%d", *(p+t));
     } 
 
