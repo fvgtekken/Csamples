@@ -10,10 +10,10 @@ are stored in contiguous memory locations in index order. For example, Figure 4-
 shows how array a appears in memory if it starts at memory location 1000 and is
 declared as shown here: */
 
- 
  char p[10]; 
  double balance[100];
  int x[100];
+ int count[10], i;
 
  p[0] = 'd';
  x[0] = 55;
@@ -24,6 +24,14 @@ declared as shown here: */
  //for printf: %f is double, %Lf is long double.
  printf("%f\n", balance[1]);
  printf("%c\n", p[0]);
+
+
+/* this causes count to be overrun */
+for(i=0; i<100; i++){
+    count[i] = i;
+} 
+
+printf("%d\n",count[15]);
 
  return 0;
 
