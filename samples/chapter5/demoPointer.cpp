@@ -23,16 +23,29 @@ Figure 5-1 illustrates this situation.
 
 
 int main(void) {
-    
-    int *p;
-    int sample[10];
-    sample[0] = 99;
-    
 
-    p = sample;
+    int target, source;
+    int *m;
     
+    source = 10;
+    /*
+    &, a unary operator that returns 
+    the memory address of its operand.
+    Places into m the memory address of the variable count.
+    */
+    m = &source;
+    
+    /*
+    The second pointer operator is *, which is the complement of &. 
+    The * is a unary operator that returns the value of the variable located 
+    at the address that follows it. For example, if m contains the memory address 
+    of the variable source,
+    
+    */
 
-    printf("%d esto es una chapoteada pointer", p[0]);
-
+    target = *m;
+    
+    printf("%d", target);
     return 0;
+
 }
