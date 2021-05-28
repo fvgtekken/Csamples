@@ -31,7 +31,7 @@ int main (void) {
   for(i = 0; i<arrSize; i++ ){
       x[i] = &str[i];
       printf("Estas son las direcciones yanques del array pointer:\n");
-      printf("Memory Address %d: %d\n",i, x[i]);
+      printf("Memory Address %d: %c\n",i, *x[i]);
   }
     
   return 0;
