@@ -21,6 +21,8 @@ int main(void) {
 void check(char *a, char *b, int (*cmp)(const char *, const char *)) {
     printf("Testing for equality.\n");
     
+    // We also could use cmp(a, b) instead of (*cmp)(a, b);
+
     if(!(*cmp)(a, b)){
         printf("Equal");
     } else {
