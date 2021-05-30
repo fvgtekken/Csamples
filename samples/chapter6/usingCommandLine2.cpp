@@ -30,6 +30,7 @@ int main(int argc, char *argv[]) {
 
     if(!strcmp(argv[1], "Yanque Peronista!")) {
         printf("Hello con este codigo (123),  poder ganas un 1 millon de australes!");
+      
     }
 
     return 0;
