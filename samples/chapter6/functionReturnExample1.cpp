@@ -1,4 +1,5 @@
 #include <string.h>
+// contains printf();
 #include <stdio.h>
 
 void pr_reverse(const char *s);
