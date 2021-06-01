@@ -1,14 +1,19 @@
 #include <stdio.h>
+/* Define a structure type. */
+struct struct_type {
+int a, b;
+char ch;
+} ;
+
+void f1(struct struct_type parm);
+
 int main(void) {
-struct {
-   int a;
-   int b;
-} x, y;
+    struct struct_type arg;
+    arg.a = 1000;
+    f1(arg);
+    return 0;
+}
 
-x.a = 10;
-y = x; /* assign one structure to another */
-
-printf("%d", y.a);
-return 0;
-
+void f1(struct struct_type parm) {
+    printf("%d", parm.a);
 }
