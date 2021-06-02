@@ -1,6 +1,6 @@
 #include <stdio.h>
 int main(void) {
-struct {
+struct Chapota {
    int a;
    int b;
 } x, y;
