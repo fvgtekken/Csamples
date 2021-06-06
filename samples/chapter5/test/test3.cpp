@@ -18,7 +18,7 @@ tos = stack; /* tos points to the top of stack */
 p1 = stack; /* initialize p1 */
 
 //printf("Init Memory p1:%d\n ", p1);
-tos = tos+1;
+//tos = tos+1;
 
 printf("Init Memory tos+Size:%d\n", *tos);
 
@@ -28,8 +28,7 @@ do {
     printf("Enter value: ");
     scanf("%d", &value);
     if(value!=0) {
-        int chpote = push(value);
-        printf("Success entered value: %d\n", chpote);
+        printf("Success entered value: %d\n", push(value));
     } else {
         printf("value on top is %d\n", pop());
     }
@@ -40,7 +39,7 @@ do {
 }
 
 int push(int i) {
-
+    printf("Before Address ++ p1:%d\n ", p1);
     p1++;
     if(p1==(tos+SIZE)) {
         printf("Address Memory p1:%d\n ", p1);
@@ -49,8 +48,9 @@ int push(int i) {
         printf("Stack Overflow.\n");
         exit(1);
     }
-
+     printf("After Address ++ p1:%d\n ", p1);
     *p1 = i;
+     printf("After Asign Address ++ p1:%d\n ", p1);
     return *p1;
 
 }
@@ -58,10 +58,12 @@ int push(int i) {
 
 int pop(void) {
     
+    printf("Entered to POP\n");
+
     if(p1==tos) {
         printf("Stack Underflow.\n");
         exit(1);
     }
-    p1--;
-    return *(p1+1);
+    //p1--;
+    return *p1;
 }
