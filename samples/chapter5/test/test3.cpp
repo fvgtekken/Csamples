@@ -1,9 +1,9 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#define SIZE 50
+#define SIZE 3
 
-void push(int i);
+int push(int i);
 int pop(void);
 int *tos, *p1, stack[SIZE];
 
@@ -18,7 +18,8 @@ do {
     printf("Enter value: ");
     scanf("%d", &value);
     if(value!=0) {
-        push(value);
+         int chpote = push(value);
+        printf("%d", chpote);
     } else {
         printf("value on top is %d\n", pop());
     }
@@ -28,15 +29,16 @@ do {
   return 0;
 }
 
-void push(int i) {
+int push(int i) {
 
-p1++;
-if(p1==(tos+SIZE)) {
-    printf("Stack Overflow.\n");
-    exit(1);
-}
+    p1++;
+    if(p1==(tos+SIZE)) {
+        printf("Stack Overflow.\n");
+        exit(1);
+    }
 
-*p1 = i;
+    *p1 = i;
+    return i;
 
 }
 
@@ -49,5 +51,4 @@ int pop(void) {
     }
     p1--;
     return *(p1+1);
-
 }
