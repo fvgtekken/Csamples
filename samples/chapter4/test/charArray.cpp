@@ -28,9 +28,9 @@ int main (void) {
      printf("%d\n esto es el lenght", strlen(str[0]));
      printf("%c\n", str[1][0]);
     
-    for(i = 0; i<strlen(str[0]); i++) {
+    for(i = 0; i<strlen(str[1]); i++) {
         
-            printf("%c", str[0][i]);
+            printf("%c", str[1][i]);
 
         // printf("%s", "in FOR!");
       //   printf("%c", str[i]);
