@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <string.h>
+#include <iostream>
+
 void check(char *a, char *b, 
 int (*cmp)(const char *, const char *));
 
