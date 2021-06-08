@@ -3,6 +3,7 @@
 #include <iostream>
 
 void check(char *a, char *b, int (*cmp)(const char *, const char *));
+
 int main(void) {
 
 char s1[80], s2[80];
