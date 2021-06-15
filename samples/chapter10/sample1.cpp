@@ -1,8 +1,9 @@
 #include <stdio.h>
 #define ABS(a) (a)<0 ? -(a) : (a)
+#define MAX 10
 
 int main(void) {
-
+   
     printf("abs of -1 and 1: %d %d", ABS(-1), ABS(1));
     return 0;
 
